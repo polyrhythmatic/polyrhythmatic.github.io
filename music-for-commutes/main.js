@@ -31,4 +31,6 @@ Tone.Transport.loop = true;
 Tone.Transport.bpm.value = 130;
 Tone.Transport.swing = 0.2;
 
-Tone.Transport.start();
+
+document.getElementById('submit').addEventListener('click', Tone.Transport.start();
+);
