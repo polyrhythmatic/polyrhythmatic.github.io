@@ -1,6 +1,5 @@
-var osc = new Tone.Oscillator(440, "sine").toMaster();
-		osc.volume.value = -10;
+var noise = new Tone.Noise().toMaster();
+//so it's not too loud
+noise.volume.value = -20;
 
-		var vibrato = new Tone.LFO(6, -25, 25)
-			.connect(osc.detune)
-			.start();
+noise.start();
