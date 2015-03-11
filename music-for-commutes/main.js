@@ -1,14 +1,6 @@
-//create one of Tone's built-in synthesizers
-var synth = new Tone.MonoSynth();
+var osc = new Tone.Oscillator(440, "sine").toMaster();
+		osc.volume.value = -10;
 
-//connect the synth to the master output channel
-synth.toMaster();
-
-//create a callback which is invoked every quarter note
-Tone.Transport.setInterval(function(time){
-    //trigger middle C for the duration of an 8th note
-    synth.triggerAttackRelease("C4", "8n", time);
-}, "4n");
-
-//start the transport
-Tone.Transport.start();
+		var vibrato = new Tone.LFO(6, -25, 25)
+			.connect(osc.detune)
+			.start();
