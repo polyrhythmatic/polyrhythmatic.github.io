@@ -105,7 +105,7 @@ nx.onload = function() {
     });
 }
 
-var accMag;
+var accMag = 0;
 
 window.ondevicemotion = function(event) {
     var x = event.accelerationIncludingGravity.x;
