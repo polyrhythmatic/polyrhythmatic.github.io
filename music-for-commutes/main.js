@@ -10,7 +10,6 @@ var bandpassFilter = new Tone.Filter(300, "bandpass");
 bandpassFilter.q = 15;
 var noise = new Tone.Noise("brown").chain(bandpassFilter, noiseReverb, Tone.Master);
 noise.volume.value = -15;
-noise.start();
 
 var reverb = new Tone.Freeverb(0.7, 0.7);
 reverb.wet.value = 0.8;
@@ -22,7 +21,7 @@ var feedbackDelay = new Tone.PingPongDelay({
 }).toMaster();
 
 var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(reverb, feedbackDelay, Tone.Master);
-chord.volume.value = -10;
+chord.volume.value = -13;
 
 var noiseFiltInc = true;
 var noiseFilterFreq = 300;
@@ -101,6 +100,15 @@ Tone.Transport.setInterval(function(time) {
 
 nx.onload = function() {
     onOff.on('*', function() {
+        noise.start();
         Tone.Transport.start();
     });
+}
+
+
+window.ondevicemotion = function(event) {
+    var x = event.accelerationIncludingGravity.x;
+    var y = event.accelerationIncludingGravity.y;
+    var z = event.accelerationIncludingGravity.z;
+    console.log(x);
 }
