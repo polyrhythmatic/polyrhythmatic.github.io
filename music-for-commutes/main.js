@@ -124,7 +124,6 @@ window.ondevicemotion = function(event) {
 
     for (var i = 99; i >= 1; i--) {
         accMagArray[i] = accMagArray[i - 1]
-        console.log(accMagArray[i]);
     }
     accMagArray[0] = x * x + y * y + z * z;
 
@@ -132,4 +131,5 @@ window.ondevicemotion = function(event) {
     	accMag += accMagArray[i];
     }
     accMag = accMag/100;
+    console.log(accMag);
 }
