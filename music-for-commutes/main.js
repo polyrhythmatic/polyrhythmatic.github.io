@@ -3,23 +3,26 @@ lowpassFilter.Q = 10;
 var bass = new Tone.FMSynth().chain(lowpassFilter, Tone.Master);
 bass.harmonicity = 14;
 
+var noiseReverb = new Tone.Freeverb(0.7, 0.7);
+noiseReverb.wet.value = 0.3;
+
 var bandpassFilter = new Tone.Filter(300, "bandpass");
 bandpassFilter.q = 15;
-var noise = new Tone.Noise("brown").chain(bandpassFilter, Tone.Master);
-noise.volume.value = -10;
+var noise = new Tone.Noise("brown").chain(bandpassFilter, noiseReverb, Tone.Master);
+noise.volume.value = -15;
 noise.start();
 
 var reverb = new Tone.Freeverb(0.7, 0.7);
-reverb.wet.value = 0.5;
+reverb.wet.value = 0.8;
 
 var feedbackDelay = new Tone.PingPongDelay({
     "delayTime": ".5",
     "feedback": 0.8,
-    "wet": 0.4
+    "wet": 0.5
 }).toMaster();
 
-var chord = new Tone.PolySynth().chain(reverb, feedbackDelay, Tone.Master);
-chord.volume.value = -20;
+var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(reverb, feedbackDelay, Tone.Master);
+chord.volume.value = -10;
 
 var noiseFiltInc = true;
 var noiseFilterFreq = 300;
