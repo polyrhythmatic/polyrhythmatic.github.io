@@ -112,8 +112,15 @@ window.ondevicemotion = function(event) {
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
 
-    var accMagnitude = x*x + y*y + z*z;
+    var accMagArray = [];
+    for (var i = 99; i > 0; i--) {
+        accMagArray[i] = accMagArray[i - 1]
+    }
+    accMagArray[0] = x * x + y * y + z * z;
 
-    accMag = (accMag + accMagnitude)/2
+    for(var i = 0; i <100; i++){
+    	accMag += accMagArray[i];
+    }
+    accMag = accMag/100;
     console.log(accMag);
 }
