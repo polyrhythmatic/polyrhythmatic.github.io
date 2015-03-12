@@ -106,12 +106,21 @@ nx.onload = function() {
 }
 
 var accMag = 0;
+var accMagArray = [];
 
 window.ondevicemotion = function(event) {
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
-    var accMagArray = [];
+
+    // accMagArray.push([x, y, z]);
+
+    // if (accMagArray.length > 100){
+    // 	//take your average and magnitude
+
+
+    // 	accMagArray.shift();
+    // }
 
     for (var i = 99; i >= 1; i--) {
         accMagArray[i] = accMagArray[i - 1]
