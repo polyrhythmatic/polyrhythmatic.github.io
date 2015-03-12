@@ -1,35 +1,99 @@
-var hh = new Tone.Player("./audio/hi-hat.mp3")
-    .toMaster();
+var lowpassFilter = new Tone.Filter(180, "lowpass", -12);
+lowpassFilter.Q = 10;
+var bass = new Tone.FMSynth().chain(lowpassFilter, Tone.Master);
+bass.harmonicity = 14;
 
-var Score = {
-    "kick": ["0", "0:2:2", "0:3:1"],
-    //use any Tone.Time representation or expression
-    "snare": ["4n*1", "4n*3"],
-    "hh": ["0*16n", "1*16n", "2*16n", "3*16n", "4*16n", "5*16n", "6*16n", "7*16n", "8*16n", "9*16n", "10*16n", "11*16n", "12*16n", "13*16n", "14*16n", "15*16n"],
-    //if the array is composed of other arrays time is the first value
-    //the rest of the values are given to the callback in order
+var bandpassFilter = new Tone.Filter(300, "bandpass");
+bandpassFilter.q = 15;
+var noise = new Tone.Noise("brown").chain(bandpassFilter, Tone.Master);
+noise.volume.value = -10;
+noise.start();
+
+var reverb = new Tone.Freeverb(0.7, 0.7);
+reverb.wet.value = 0.5;
+
+var feedbackDelay = new Tone.PingPongDelay({
+    "delayTime": ".5",
+    "feedback": 0.8,
+    "wet": 0.4
+}).toMaster();
+
+var chord = new Tone.PolySynth().chain(reverb, feedbackDelay, Tone.Master);
+chord.volume.value = -20;
+
+var noiseFiltInc = true;
+var noiseFilterFreq = 300;
+var noiseInc = 50;
+
+var kickEnv = new Tone.AmplitudeEnvelope({
+    "attack": 0.01,
+    "decay": 0.2,
+    "sustain": 0,
+    "release": 0
+}).toMaster();
+
+var osc = new Tone.Oscillator(50, "sine")
+    .connect(kickEnv)
+    .start();
+
+var score = {
     "bass": [
-        ["0:0", "C2", "2n"],
-        ["0:3:2", "C3", "8n"]
+        ["0", "C1", "8n"],
+        ["8n * 2", "D1", "16n"],
+        ["16n * 9", "D1", "16n"],
+        ["4:0:0", "C1", "8n"],
+        ["4:1:0", "D1", "16n"],
+        ["4:2:0:1", "D1", "16n"],
     ],
-    "keys": [
-        ["0:0:2", ["E4", "G4", "A4"]],
-        ["0:0:3", ["E4", "G4", "A4"]],
-        ["0:1:3", ["E4", "G4", "A4"]]
-    ],
+    "chord": [
+        ["0:0:1", ["A4", "D#4", "G4"], "16n"],
+        ["4:0:1", ["G4", "A#4", "D4"], "16n"],
+        //["0:1:3", ["E4", "G4", "A4"], "8n"]
+    ]
+
 };
 
-Tone.Note.parseScore(Score);
+Tone.Note.parseScore(score);
 
-Tone.Note.route("hh", function(time) {
-    hh.start(time);
+Tone.Note.route("bass", function(time, note, duration) {
+    bass.triggerAttackRelease(note, time, duration);
 });
 
-Tone.Transport.loopStart = 0;
-Tone.Transport.loopEnd = "1:0";
+Tone.Note.route("chord", function(time, value, duration) {
+
+    for (var i = 0; i < value.length; i++) {
+
+        chord.triggerAttackRelease(value[i], time, duration);
+
+    }
+});
+
+
 Tone.Transport.loop = true;
-Tone.Transport.bpm.value = 130;
-Tone.Transport.swing = 0.2;
+Tone.Transport.setLoopPoints(0, "8:0:0");
+Tone.Transport.bpm.value = 140;
 
 
-document.getElementById('submit').addEventListener('click', Tone.Transport.start());
+Tone.Transport.setInterval(function(time) {
+
+    if (noiseFilterFreq > 2000) {
+        noiseFiltInc = false;
+    } else if (noiseFilterFreq < 300) {
+        noiseFiltInc = true;
+    }
+
+    if (noiseFiltInc) {
+        noiseFilterFreq += noiseInc;
+    } else {
+        noiseFilterFreq -= noiseInc;
+    }
+    bandpassFilter.frequency.value = noiseFilterFreq;
+    //console.log(noiseFilterFreq);
+
+}, "64n");
+
+Tone.Transport.setInterval(function(time) {
+    kickEnv.triggerAttackRelease();
+}, "4n");
+
+Tone.Transport.start();
