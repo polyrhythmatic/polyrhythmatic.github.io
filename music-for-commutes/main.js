@@ -99,4 +99,8 @@ Tone.Transport.setInterval(function(time) {
     kickEnv.triggerAttackRelease();
 }, "4n");
 
-Tone.Transport.start();
+nx.onload = function() {
+    onOff.on('*', function() {
+        Tone.Transport.start();
+    });
+}
