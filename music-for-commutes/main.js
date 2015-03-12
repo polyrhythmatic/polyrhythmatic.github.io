@@ -133,7 +133,7 @@ window.ondevicemotion = function(event) {
             accMag += accMagArray[i];
         }
     }
+    console.log(accMag);
     accMag = accMag / 100;
 
-    console.log(accMag);
 }
