@@ -106,27 +106,19 @@ nx.onload = function() {
 }
 
 var accMag = 0;
-var accMagArray = [0];
+var accMagArray = [];
 
 window.ondevicemotion = function(event) {
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
 
-    // accMagArray.push([x, y, z]);
+    accMagArray.push(x*x + y*y + z*z);
 
-    // if (accMagArray.length > 100){
-    // 	//take your average and magnitude
+     if (accMagArray.length > 100){
 
-
-    // 	accMagArray.shift();
-    // }
-
-    for (var i = 99; i >= 1; i--) {
-        accMagArray[i] = accMagArray[i - 1]
-    }
-
-    accMagArray[0] = x*x + y*y + z*z;
+     	accMagArray.shift();
+     }
 
     for (var i = 0; i <= 99; i++) {
         if (accMagArray[i] != NaN) {
