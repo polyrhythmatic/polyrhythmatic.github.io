@@ -105,10 +105,13 @@ nx.onload = function() {
     });
 }
 
+var accMag;
 
 window.ondevicemotion = function(event) {
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
-    console.log(x);
+
+    var accMagnitude = x*x + y*y + z*z;
+    console.log(accMagnitude);
 }
