@@ -109,6 +109,7 @@ var accMag = 0;
 var accMagArray = [];
 
 window.ondevicemotion = function(event) {
+	debugger;
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
