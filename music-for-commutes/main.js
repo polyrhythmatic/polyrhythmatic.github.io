@@ -125,12 +125,15 @@ window.ondevicemotion = function(event) {
     for (var i = 99; i >= 1; i--) {
         accMagArray[i] = accMagArray[i - 1]
     }
+
     accMagArray[0] = x * x + y * y + z * z;
 
-    for(var i = 0; i <=99; i++){
-    	accMag += accMagArray[i];
+    for (var i = 0; i <= 99; i++) {
+        if (accMagArray[i] != NaN) {
+            accMag += accMagArray[i];
+        }
     }
-    accMag = accMag/100;
-    
+    accMag = accMag / 100;
+
     console.log(accMag);
 }
