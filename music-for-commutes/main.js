@@ -106,7 +106,7 @@ nx.onload = function() {
 }
 
 var accMag = 0;
-var accMagArray = [];
+var accMagArray = [0];
 
 window.ondevicemotion = function(event) {
     var x = event.accelerationIncludingGravity.x;
