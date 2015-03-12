@@ -113,5 +113,7 @@ window.ondevicemotion = function(event) {
     var z = event.accelerationIncludingGravity.z;
 
     var accMagnitude = x*x + y*y + z*z;
-    console.log(accMagnitude);
+
+    accMag = (accMag + accMagnitude)/2
+    console.log(accMag);
 }
