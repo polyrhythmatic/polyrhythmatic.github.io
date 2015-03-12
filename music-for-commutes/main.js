@@ -125,7 +125,7 @@ window.ondevicemotion = function(event) {
     for (var i = 0; i < accMagArray.length; i++) {
         accMag = accMag + accMagArray[i];
     }
-    console.log(accMag);
+    //console.log(accMag);
     accAvg = accMag / 100;
 
 }
