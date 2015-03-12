@@ -105,11 +105,11 @@ nx.onload = function() {
     });
 }
 
-var accMag = 0;
+var accAvg = 0;
 var accMagArray = [];
 
 window.ondevicemotion = function(event) {
-	debugger;
+	//debugger;
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
@@ -121,12 +121,11 @@ window.ondevicemotion = function(event) {
      	accMagArray.shift();
      }
 
-    for (var i = 0; i <= 99; i++) {
-        if (accMagArray[i] != NaN) {
-            accMag = accMag + accMagArray[i];
-        }
+    var accMag = 0;
+    for (var i = 0; i < accMagArray.length; i++) {
+        accMag = accMag + accMagArray[i];
     }
     console.log(accMag);
-    accMag = accMag / 100;
+    accAvg = accMag / 100;
 
 }
