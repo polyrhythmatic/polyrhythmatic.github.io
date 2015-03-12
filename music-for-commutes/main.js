@@ -126,11 +126,11 @@ window.ondevicemotion = function(event) {
         accMagArray[i] = accMagArray[i - 1]
     }
 
-    accMagArray[0] = x + y + z;
+    accMagArray[0] = x*x + y*y + z*z;
 
     for (var i = 0; i <= 99; i++) {
         if (accMagArray[i] != NaN) {
-            accMag += accMagArray[i];
+            accMag = accMag + accMagArray[i];
         }
     }
     console.log(accMag);
