@@ -101,10 +101,6 @@ Tone.Transport.setInterval(function(time) {
 
 nx.onload = function() {
     onOff.on('*', function() {
-        noise.start();
-        if (actionTiming.stageOne == true) {
-            Tone.Transport.start();
-        }
     });
 }
 
@@ -133,6 +129,7 @@ window.ondevicemotion = function(event) {
     accAvg = accMag / 100;
     actionTiming();
 
+    movementUpdate();
 }
 var stageOne;
 
@@ -140,4 +137,11 @@ var actionTiming = function() {
     if (accAvg > 150 && Date.now() - startTime > 4000) {
         stageOne = true;
     }
+}
+
+var movementUpdate = function() {
+	if (actionTiming.stageOne == true) {
+            noise.start();
+            Tone.Transport.start();
+        }
 }
