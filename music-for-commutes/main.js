@@ -142,5 +142,7 @@ var actionTiming = function() {
 }
 
 var movementUpdate = function() {
-    if (stageOne) {}
+    if (stageOne) {
+    	console.log("stageOne success");
+    }
 }
