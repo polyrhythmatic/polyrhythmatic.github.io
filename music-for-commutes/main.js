@@ -140,7 +140,7 @@ var actionTiming = function() {
 }
 
 var movementUpdate = function() {
-    if (stageOne == true) {
+    if (stageOne) {
         noise.start();
         Tone.Transport.start();
     }
