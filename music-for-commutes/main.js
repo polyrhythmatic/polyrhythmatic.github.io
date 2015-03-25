@@ -141,8 +141,9 @@ var actionTiming = function() {
     }
 }
 
-function movementUpdate(){
+function movementUpdate() {
     if (stageOne) {
-    	console.log("stageOne success");
+        noise.start();
+        Tone.Transport.start();
     }
 }
