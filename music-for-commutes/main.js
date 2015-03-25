@@ -130,11 +130,13 @@ window.ondevicemotion = function(event) {
     }
     //console.log(accMag);
     accAvg = accMag / 100;
+    actionTiming();
 
 }
+var stageOne;
 
-function actionTiming() {
+var actionTiming = function() {
     if (accAvg > 150 && Date.now() - startTime > 4000) {
-        this.stageOne = true;
+        stageOne = true;
     }
 }
