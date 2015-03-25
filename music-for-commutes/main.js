@@ -96,11 +96,13 @@ Tone.Transport.bpm.value = 140;
 
 Tone.Transport.setInterval(function(time) {
     kickEnv.triggerAttackRelease();
-
 }, "4n");
 
 nx.onload = function() {
-    onOff.on('*', function() {});
+    onOff.on('*', function() {
+        noise.start();
+        Tone.Transport.start();
+    });
 }
 
 var accAvg = 0;
@@ -140,8 +142,5 @@ var actionTiming = function() {
 }
 
 var movementUpdate = function() {
-    if (stageOne) {
-        noise.start();
-        Tone.Transport.start();
-    }
+    if (stageOne) {}
 }
