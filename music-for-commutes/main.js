@@ -95,15 +95,16 @@ Tone.Transport.bpm.value = 140;
 // }, "64n");
 
 Tone.Transport.setInterval(function(time) {
-    if (actionTiming.stageOne == true) {
-        kickEnv.triggerAttackRelease();
-    }
+    kickEnv.triggerAttackRelease();
+
 }, "4n");
 
 nx.onload = function() {
     onOff.on('*', function() {
         noise.start();
-        Tone.Transport.start();
+        if (actionTiming.stageOne == true) {
+            Tone.Transport.start();
+        }
     });
 }
 
