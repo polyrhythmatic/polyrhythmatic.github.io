@@ -75,24 +75,24 @@ Tone.Transport.loop = true;
 Tone.Transport.setLoopPoints(0, "8:0:0");
 Tone.Transport.bpm.value = 140;
 
+// temp removed bandpass filter
+// Tone.Transport.setInterval(function(time) {
 
-Tone.Transport.setInterval(function(time) {
+//     if (noiseFilterFreq > 2000) {
+//         noiseFiltInc = false;
+//     } else if (noiseFilterFreq < 300) {
+//         noiseFiltInc = true;
+//     }
 
-    if (noiseFilterFreq > 2000) {
-        noiseFiltInc = false;
-    } else if (noiseFilterFreq < 300) {
-        noiseFiltInc = true;
-    }
+//     if (noiseFiltInc) {
+//         noiseFilterFreq += noiseInc;
+//     } else {
+//         noiseFilterFreq -= noiseInc;
+//     }
+//     bandpassFilter.frequency.value = noiseFilterFreq;
+//     //console.log(noiseFilterFreq);
 
-    if (noiseFiltInc) {
-        noiseFilterFreq += noiseInc;
-    } else {
-        noiseFilterFreq -= noiseInc;
-    }
-    bandpassFilter.frequency.value = noiseFilterFreq;
-    //console.log(noiseFilterFreq);
-
-}, "64n");
+// }, "64n");
 
 Tone.Transport.setInterval(function(time) {
     kickEnv.triggerAttackRelease();
