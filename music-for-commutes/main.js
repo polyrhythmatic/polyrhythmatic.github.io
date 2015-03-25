@@ -95,7 +95,7 @@ Tone.Transport.bpm.value = 140;
 // }, "64n");
 
 Tone.Transport.setInterval(function(time) {
-    if (actionTiming(Date.now()).stageOne == true) {
+    if (actionTiming.stageOne == true) {
         kickEnv.triggerAttackRelease();
     }
 }, "4n");
@@ -133,8 +133,8 @@ window.ondevicemotion = function(event) {
 
 }
 
-function actionTiming(curTime) {
-    if (accAvg > 150 && curTime - startTime > 4000) {
+function actionTiming() {
+    if (accAvg > 150 && Date.now() - startTime > 4000) {
         this.stageOne = true;
     }
 }
