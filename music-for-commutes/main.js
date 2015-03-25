@@ -6,9 +6,9 @@ bass.harmonicity = 14;
 var noiseReverb = new Tone.Freeverb(0.7, 0.7);
 noiseReverb.wet.value = 0.3;
 
-var bandpassFilter = new Tone.Filter(300, "bandpass");
-bandpassFilter.q = 15;
-var noise = new Tone.Noise("brown").chain(bandpassFilter, noiseReverb, Tone.Master);
+//var bandpassFilter = new Tone.Filter(300, "bandpass");
+//bandpassFilter.q = 15;
+var noise = new Tone.Noise("brown").chain(noiseReverb, Tone.Master);//temp removed bandpassFilter that went before reverb
 noise.volume.value = -15;
 
 //var reverb = new Tone.Freeverb(0.7, 0.7);//temp removed reverb
@@ -20,7 +20,7 @@ var feedbackDelay = new Tone.PingPongDelay({
     "wet": 0.5
 }).toMaster();
 
-var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(feedbackDelay, Tone.Master);//temp removed reverb
+var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(noiseReverb, feedbackDelay, Tone.Master);//temp removed reverb
 chord.volume.value = -13;
 
 var noiseFiltInc = true;
