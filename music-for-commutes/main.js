@@ -141,7 +141,7 @@ var actionTiming = function() {
     }
 }
 
-var movementUpdate = function() {
+function movementUpdate(){
     if (stageOne) {
     	console.log("stageOne success");
     }
