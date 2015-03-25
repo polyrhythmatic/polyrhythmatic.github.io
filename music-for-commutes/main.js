@@ -8,7 +8,7 @@ noiseReverb.wet.value = 0.3;
 
 //var bandpassFilter = new Tone.Filter(300, "bandpass");
 //bandpassFilter.q = 15;
-var noise = new Tone.Noise("brown").chain(noiseReverb, Tone.Master);//temp removed bandpassFilter that went before reverb
+var noise = new Tone.Noise("brown").chain(noiseReverb, Tone.Master); //temp removed bandpassFilter that went before reverb
 noise.volume.value = -15;
 
 //var reverb = new Tone.Freeverb(0.7, 0.7);//temp removed reverb
@@ -20,7 +20,7 @@ var feedbackDelay = new Tone.PingPongDelay({
     "wet": 0.5
 }).toMaster();
 
-var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(noiseReverb, feedbackDelay, Tone.Master);//temp removed reverb
+var chord = new Tone.PolySynth(4, Tone.DuoSynth).chain(noiseReverb, feedbackDelay, Tone.Master); //temp removed reverb
 chord.volume.value = -13;
 
 var noiseFiltInc = true;
@@ -94,9 +94,11 @@ Tone.Transport.bpm.value = 140;
 
 // }, "64n");
 
-Tone.Transport.setInterval(function(time) {
-    kickEnv.triggerAttackRelease();
-}, "4n");
+if (actionTiming.stageOne == true) {
+    Tone.Transport.setInterval(function(time) {
+        kickEnv.triggerAttackRelease();
+    }, "4n");
+}
 
 nx.onload = function() {
     onOff.on('*', function() {
@@ -107,19 +109,20 @@ nx.onload = function() {
 
 var accAvg = 0;
 var accMagArray = [];
+var startTime = Date.now();
 
 window.ondevicemotion = function(event) {
-	//debugger;
+    //debugger;
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
 
-    accMagArray.push(x*x + y*y + z*z);
+    accMagArray.push(x * x + y * y + z * z);
 
-     if (accMagArray.length > 100){
+    if (accMagArray.length > 100) {
 
-     	accMagArray.shift();
-     }
+        accMagArray.shift();
+    }
 
     var accMag = 0;
     for (var i = 0; i < accMagArray.length; i++) {
@@ -128,4 +131,10 @@ window.ondevicemotion = function(event) {
     //console.log(accMag);
     accAvg = accMag / 100;
 
+}
+
+function actionTiming() {
+    if (accAvg > 150 && Date.now() - startTime > 4000) {
+        this.stageOne = true;
+    }
 }
