@@ -1,0 +1,16 @@
+# Site settings
+title: Seth Kranzler
+email: sethkranzler@gmail.com
+description: > 
+  This is the personal site of Seth Kranzler
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:4000" # the base hostname & protocol for your site
+twitter_username: polyrhythmic
+github_username:  polyrhythmatic
+
+# Build settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
