@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+	<nav class="front-page__nav">
+		<a class="front-page__logo">Seth Kranzler</a>
+		<ul class="front-page__nav-items">
+		{% for page in site.pages %} {% if page.title %}
+			<li class="front-page__nav-item"><a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
+		{% endif %}{% endfor %}
+		</ul>
+
+	</nav>
+	<main>
+		<div class="front-page__projects">
+			{% for project in site.projects %} {% if project.title %}
+			<div class="front-page__project">
+				<a href="{{ project.url | prepend: site.baseurl }}">
+					<img class="front-page__project-image" src="{{ project.img }}">
+				</a>
+				<div class="front-page__project-title">
+					<p>{{ project.title }}</p>
+				</div>
+			</div>
+			{% endif %} {% endfor %}
+		</div>
+		<section>
+			{{ content }}
+		</section>
+	</main>
+	{% include footer.html %}
+</body>
+
+</html>
