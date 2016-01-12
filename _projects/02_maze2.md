@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Contact
-permalink: /contact/
-img: /images/test.jpg
+title: Maze2
+permalink: /maze2/
+img: /images/maze2.gif
+vid: /videos/maze2.mp4
 ---
 
 Contact content goes here.

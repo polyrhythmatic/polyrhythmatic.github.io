@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include head.html %} {% include header.html %}
 
 <body>
-	<nav class="front-page__nav">
-		<a class="front-page__logo">Seth Kranzler</a>
-		<ul class="front-page__nav-items">
-		{% for page in site.pages %} {% if page.title %}
-			<li class="front-page__nav-item"><a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
-		{% endif %}{% endfor %}
-		</ul>
+    <main>
+        <div class="front-page__projects">
+            {% for project in site.projects %} {% if project.title %}
+            <div class="front-page__project">
+                <a href="{{ project.url | prepend: site.baseurl }}">
+                    <!-- <img class="front-page__project-image" src="{{ project.img }}"> -->
+                    <video poster="{{ project.img }}"class="front-page__project-image" src="{{ project.vid }}" loop preload="none"></video>
+                    <div class="front-page__project-title">
+                        <p>{{ project.title }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+        <section>
+            {{ content }}
+        </section>
+    </main>
+    {% include footer.html %}
+    <script type="text/javascript">
+    var figure = $(".front-page__project").hover(hoverVideo, hideVideo);
 
-	</nav>
-	<main>
-		<div class="front-page__projects">
-			{% for project in site.projects %} {% if project.title %}
-			<div class="front-page__project">
-				<a href="{{ project.url | prepend: site.baseurl }}">
-					<img class="front-page__project-image" src="{{ project.img }}">
-				</a>
-				<div class="front-page__project-title">
-					<p>{{ project.title }}</p>
-				</div>
-			</div>
-			{% endif %} {% endfor %}
-		</div>
-		<section>
-			{{ content }}
-		</section>
-	</main>
-	{% include footer.html %}
+    function hoverVideo(e) {
+        $('video', this).get(0).play();
+    }
+
+    function hideVideo(e) {
+        $('video', this).get(0).pause();
+    }
+    </script>
 </body>
 
 </html>
