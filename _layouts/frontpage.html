@@ -5,7 +5,7 @@
 <body>
     <main>
         <div class="front-page__projects">
-            {% for project in site.projects %} {% if project.title %}
+            {% for project in site.projects reversed %} {% if project.title %}
             <div class="front-page__project">
                 <a href="{{ project.url | prepend: site.baseurl }}">
                     <!-- <img class="front-page__project-image" src="{{ project.img }}"> -->
