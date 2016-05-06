@@ -9,7 +9,7 @@
             <div class="front-page__project">
                 <a href="{{ project.url | prepend: site.baseurl }}">
                     <!-- <img class="front-page__project-image" src="{{ project.img }}"> -->
-                    <video poster="{{ project.img }}"class="front-page__project-image" src="{{ project.vid }}" loop preload="none"></video>
+                    <video poster="{{ project.poster }}" class="front-page__project-image" src="{{ project.vid }}" loop preload="none"></video>
                     <div class="front-page__project-title">
                         <p>{{ project.title }}</p>
                     </div>

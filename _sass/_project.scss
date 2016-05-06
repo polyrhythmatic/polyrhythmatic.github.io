@@ -1,0 +1,47 @@
+.pull-center {
+	float: left;
+	width: 100%;
+}
+.pull-left {
+	float: left;
+	padding-right: 10px;
+}
+
+.pull-right {
+	float:right;
+	padding-left: 10px;
+}
+
+.pull-left-50 {
+	@extend .pull-left;
+	width: 50%;
+}
+
+.pull-left-33 {
+	@extend .pull-left;
+	width: 33%;
+}
+
+.pull-left-66 {
+	@extend .pull-left;
+	width: 66%;
+}
+
+.pull-right-50 {
+	@extend .pull-right;
+	width: 50%;
+}
+
+.pull-right-33 {
+	@extend .pull-right;
+	width: 33%;
+}
+
+.pull-right-66 {
+	@extend .pull-right;
+	width: 66%;
+}
+
+.project-image {
+	width: 100%;
+}

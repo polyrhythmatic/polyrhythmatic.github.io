@@ -5,7 +5,4 @@ permalink: /about/
 img: /images/test.jpg
 ---
 
-About content goes here.
-
-* A list item
-* Another list item
+I am a Brooklyn based artist and technologist.
