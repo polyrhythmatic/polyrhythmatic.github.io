@@ -7,7 +7,7 @@
         <div class="front-page__projects">
             {% for project in site.projects reversed %} {% if project.title %}
             <div class="front-page__project">
-                <a href="{{ project.url | prepend: site.baseurl }}">
+                <a href="{{ project.url | prepend: site.url }}">
                     <!-- <img class="front-page__project-image" src="{{ project.img }}"> -->
                     <video poster="{{ project.poster }}" class="front-page__project-image" src="{{ project.vid }}" loop preload="none"></video>
                     <div class="front-page__project-title">
