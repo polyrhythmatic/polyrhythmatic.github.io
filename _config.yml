@@ -10,6 +10,7 @@ github_username:  polyrhythmatic
 
 # Build settings
 sass:
+  style: compressed
   sass_dir: _sass
 include: ['_pages']
 kramdown:

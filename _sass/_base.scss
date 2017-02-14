@@ -1,10 +1,10 @@
 $content-width: 800px;
 $main: #19CCAA;
-$font-style: 'Cutive Mono', sans-serif;
+$font-style: "TeXGyreHeros-Regular", sans-serif;
 $font-color: #262626;
 $link-color: #425469;
 $link-hover-color: $main;
-$heading-font: 'Montserrat', sans-serif;
+$heading-font: "TeXGyreHeros-Bold", sans-serif;
 $heading-font-color: #425469;
 $light: #E7EDF4;
 
@@ -14,4 +14,26 @@ $light: #E7EDF4;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "TeXGyreHeros-Regular";
+  src: local("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff2") format("woff2");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff") format("woff");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.ttf") format("truetype");
+  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.svg#TexGyreHeros-Regular") format("svg");
+}
+
+@font-face {
+  font-family: "TeXGyreHeros-Bold";
+  src: local("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff2") format("woff2");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff") format("woff");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.ttf") format("truetype");
+  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.svg#TexGyreHeros-Bold") format("svg");
 }
