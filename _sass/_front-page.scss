@@ -38,6 +38,7 @@
   margin-top: 180px;
   width: 100%;
   display: inline-block;
+  display: flex;
   // @media (min-width: 800px) {
   //   min-width: 32%;
   //   width: 32%;
@@ -65,20 +66,20 @@
 .front-page__project--right {
   @extend .front-page__project;
   a {
-    float: right;
+    order: 2;
   }
   & .front-page__project-description {
-    float: left;
+    order: 1;
   }
 }
 
 .front-page__project--left {
   @extend .front-page__project;
   a {
-    float: left;
+    order: 1;
   }
   & .front-page__project-description {
-    float: right;
+    order: 2;
   }
 }
 
@@ -98,12 +99,3 @@
   position: absolute;
   bottom: 0;
 }
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-  }
