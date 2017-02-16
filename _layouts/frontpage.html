@@ -6,14 +6,22 @@
   <main>
     <div class="front-page__projects">
       {% for project in site.projects reversed %} {% if project.title %}
-      <div class="front-page__project">
+      {% capture index %}{{forloop.index | modulo: 2}}{% endcapture %}
+      {% if index == "0" %}
+      {% assign justification_class = "front-page__project--right" %}
+      {% else %}
+      {% assign justification_class = "front-page__project--left" %}
+      {% endif %}
+      <div class="front-page__project {{justification_class}}">
         <a href="{{ project.url | prepend: site.url }}">
-          <!-- <img class="front-page__project-image" src="{{ project.img }}"> -->
-          <video poster="{{ project.poster }}" class="front-page__project-image" src="{{ project.vid }}" loop preload="none"></video>
-          <div class="front-page__project-title">
-            <p>{{ project.title }}</p>
-          </div>
+          <video poster="{{ project.poster }}" class="front-page__project-video" src="{{ project.vid }}" loop preload></video>
         </a>
+        <div class="front-page__project-description">
+          <div class="front-page__project-description--align-bottom">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
       </div>
       {% endif %} {% endfor %}
     </div>
@@ -23,14 +31,14 @@
   </main>
   {% include footer.html %}
   <script type="text/javascript">
-  var figure = $(".front-page__project").hover(hoverVideo, hideVideo);
+  var figure = $(".front-page__project-video").hover(hoverVideo, hideVideo);
 
   function hoverVideo(e) {
-    $('video', this).get(0).play();
+    this.play();
   }
 
   function hideVideo(e) {
-    $('video', this).get(0).pause();
+    this.pause();
   }
   </script>
 </body>

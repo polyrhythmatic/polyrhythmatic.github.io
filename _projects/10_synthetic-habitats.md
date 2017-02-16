@@ -4,6 +4,7 @@ title: Synthetic Habitats
 permalink: /synthetic-habitats/
 poster: /videos/synthetic-habitats.jpg
 vid: /videos/synthetic-habitats.mp4
+description: An exploration of the Macaulay Library of wildlife sounds, the worlds largest and oldest scientific archive of biodiversity audio and video recordings.
 ---
 
 <iframe src="https://player.vimeo.com/video/160475789" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: CV
-permalink: /cv/
+title: Info
+permalink: /info/
 img: /images/test.jpg
 ---
 a work in progress

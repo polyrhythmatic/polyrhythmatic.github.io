@@ -1,67 +1,109 @@
-.front-page__projects {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	margin: 0 auto;
-	justify-content: space-between;
-}
-
-.front-page__project {
-	width: 100%;
-	cursor: pointer;
-	@media (min-width: 800px) {
-		min-width: 32%;
-		width: 32%;
-		margin-bottom: 1%;
-	}
-	position: relative;
-	&:hover {
-		& .front-page__project-title {
-			display: block;
-		}
-	}
-}
-
-.front-page__project-image {
-	width: 100%;
-	height: auto;
-}
-
-.front-page__project-title {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	color: white;
-}
-
 .front-page__logo {
-	display: inline-block;
-	width: 25%;
-	font: $heading-font;
+  display: inline-block;
+  width: 25%;
+  font-family: $heading-font;
 }
 
 .front-page__nav {
-	position: relative;
-	width: $content-width;
-	margin: 0 auto;
-	margin-bottom: 15px;
-	padding: 15px 15px;
-	background-color: #AAA;
+  position: relative;
+  width: $content-width;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 15px 15px;
 }
 
 .front-page__nav-item {
-	display: inline-block;
-	margin-left: 15px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .front-page__nav-items {
-	list-style: none;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  margin: 0;
+  padding: 0;
 }
+
+.front-page__projects {
+  display: block;
+  // flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.front-page__project {
+  margin-top: 180px;
+  width: 100%;
+  display: inline-block;
+  // @media (min-width: 800px) {
+  //   min-width: 32%;
+  //   width: 32%;
+  //   margin-bottom: 1%;
+  // }
+  position: relative;
+  &:a {
+    &:hover {
+      cursor: pointer;
+      & .front-page__project-video {
+        filter: none;
+      }
+    }
+    // &:video {
+    //   &:hover {
+    //   }
+    // }
+  }
+}
+
+.front-page__project a {
+  width: 60%;
+}
+
+.front-page__project--right {
+  @extend .front-page__project;
+  a {
+    float: right;
+  }
+  & .front-page__project-description {
+    float: left;
+  }
+}
+
+.front-page__project--left {
+  @extend .front-page__project;
+  a {
+    float: left;
+  }
+  & .front-page__project-description {
+    float: right;
+  }
+}
+
+.front-page__project-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.front-page__project-description {
+  width: 30%;
+  height: 100%;
+}
+
+.front-page__project-description--align-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
