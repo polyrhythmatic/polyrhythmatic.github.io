@@ -13,9 +13,14 @@
       {% assign justification_class = "front-page__project--left" %}
       {% endif %}
       <div class="front-page__project {{justification_class}}">
-        <a href="{{ project.url | prepend: site.url }}">
-          <video poster="{{ project.poster }}" class="front-page__project-video" src="{{ project.vid }}" loop preload></video>
-        </a>
+        <div class="front-page__project-cascade">
+          <div class="front-page__project-bg">
+            <div class="front-page__project-bg front-page__project-bg--offset"></div>
+          </div>
+          <a href="{{ project.url | prepend: site.url }}">
+            <video poster="{{ project.poster }}" class="front-page__project-video" src="{{ project.vid }}" loop preload></video>
+          </a>
+        </div>
         <div class="front-page__project-description">
           <h4>{{ project.title }}</h4>
           <p>{{ project.description }}</p>
@@ -33,11 +38,23 @@
 
   function hoverVideo(e) {
     this.play();
-  }
-
+  };
+  
   function hideVideo(e) {
     this.pause();
+  };
+
+  function setBg(divs) {
+    var index = Math.floor(Math.random() * 26) + 1;
+    $(divs).each(function(div){
+      $(divs[div]).css("background-image", "url(\"../images/pattern_" + index + ".svg\")");
+    });
   }
+
+  var elements = $(".front-page__project-cascade");
+  elements.each(function(index) {
+    setBg($(elements[index]).find(".front-page__project-bg"));
+  });
   </script>
 </body>
 
