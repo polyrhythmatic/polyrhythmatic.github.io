@@ -1,11 +1,11 @@
 <header>
-<nav class="front-page__nav">
-    <a href="/" class="front-page__logo">Seth Kranzler</a>
-    <ul class="front-page__nav-items">
+  <nav class="front-page__nav">
+    <a href="/" class="front-page__logo"><img src="/images/front-page__nav-logo.png"></a>
+    <div class="front-page__nav-items">
     {% for page in site.pages %} {% if page.title %}
-      <li class="front-page__nav-item"><a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
+      <div class="front-page__nav-item"><a href="{{ page.url | prepend: site.baseurl }}">
+      <span><img src="{{page.img}}"/></span></a></div>
     {% endif %}{% endfor %}
     </ul>
-
   </nav>
 </header>

@@ -1,28 +1,38 @@
-$cascade-distance: 20px;
+$cascade-distance: 4vw;
 $cascade-width: 50vw;
 $cascade-height: $cascade-width * 0.5625;
+$cascade-bg-size: 40px;
 
 .front-page__logo {
   display: inline-block;
   width: 25%;
-  font-family: $heading-font;
+  // font-family: $heading-font;
 }
 
 .front-page__nav {
   position: relative;
-  width: $content-width;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   margin-bottom: 15px;
-  padding: 15px 15px;
+  margin-top: 15px;
 }
 
 .front-page__nav-item {
+  margin-bottom: 10px;
+}
+
+.front-page__nav-item span {
   display: inline-block;
-  margin-left: 15px;
+}
+
+.front-page__nav-item img {
+  width: 10%;
 }
 
 .front-page__nav-items {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   right: 15px;
   top: 15px;
@@ -32,12 +42,13 @@ $cascade-height: $cascade-width * 0.5625;
 
 .front-page__projects {
   display: block;
-  width: 100%;
+  // width: $content-width;
   margin: 0 auto;
   // justify-content: space-between;
 }
 
 .front-page__project {
+  margin-left: 20px;
   margin-top: 180px;
   width: 100%;
   display: inline-block;
@@ -133,8 +144,9 @@ $cascade-height: $cascade-width * 0.5625;
   top: 0px;
   background-repeat: repeat;
   z-index: -1;
-  background-size: 80px 80px;
+  background-size: $cascade-bg-size $cascade-bg-size;
   background-color: $background-color;
+  // border: 5px solid black;
 }
 
 .front-page__project-bg--offset {

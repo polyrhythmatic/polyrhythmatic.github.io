@@ -6,13 +6,7 @@
   <main>
     <div class="front-page__projects">
       {% for project in site.projects reversed %} {% if project.title %}
-      {% capture index %}{{forloop.index | modulo: 2}}{% endcapture %}
-      {% if index == "0" %}
-      {% assign justification_class = "front-page__project--right" %}
-      {% else %}
-      {% assign justification_class = "front-page__project--left" %}
-      {% endif %}
-      <div class="front-page__project {{justification_class}}">
+      <div class="front-page__project">
         <div class="front-page__project-cascade">
           <div class="front-page__project-bg">
             <div class="front-page__project-bg front-page__project-bg--offset"></div>
@@ -39,14 +33,14 @@
   function hoverVideo(e) {
     this.play();
   };
-  
+
   function hideVideo(e) {
     this.pause();
   };
 
   function setBg(divs) {
-    var index = Math.floor(Math.random() * 26) + 1;
     $(divs).each(function(div){
+      var index = Math.floor(Math.random() * 26) + 1;
       $(divs[div]).css("background-image", "url(\"../images/pattern_" + index + ".svg\")");
     });
   }
