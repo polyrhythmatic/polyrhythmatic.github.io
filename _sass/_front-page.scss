@@ -47,6 +47,8 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
   display: block;
   // width: $content-width;
   margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
   // justify-content: space-between;
 }
 

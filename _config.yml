@@ -12,9 +12,10 @@ github_username:  polyrhythmatic
 sass:
   style: compressed
   sass_dir: _sass
-include: ['_pages']
+include: ["_pages"]
 kramdown:
   input: GFM
 collections:
   projects:
     output: true
+exclude: ["node_modules", "package.json", "webpack", "webpack.config.js"]
