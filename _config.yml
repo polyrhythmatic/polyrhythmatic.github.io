@@ -19,3 +19,9 @@ collections:
   projects:
     output: true
 exclude: ["node_modules", "package.json", "webpack", "webpack.config.js"]
+
+gems:
+    - jekyll-minifier
+
+jekyll-minifier:
+  exclude: ["js/bundle.js"]

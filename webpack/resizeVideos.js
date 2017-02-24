@@ -1,4 +1,5 @@
-//resizes video iframes
+var $ = require("jquery");
+
 $(function() {
     var $allVideos = $("iframe[src^='https://player.vimeo.com'], iframe[src^='https://www.youtube.com'], object, embed"),
     $fluidEl = $("article");
