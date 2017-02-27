@@ -20,7 +20,12 @@
   },
   "homepage": "https://github.com/polyrhythmatic/polyrhythmatic.github.io#readme",
   "devDependencies": {
-    "concurrently": "^3.3.0"
+    "concurrently": "^3.3.0",
+    "css-loader": "^0.26.2",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
     "in-view": "^0.6.1",
