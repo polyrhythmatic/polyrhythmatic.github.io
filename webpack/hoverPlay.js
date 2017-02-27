@@ -1,11 +1,11 @@
-var $ = require("jquery");
+var videos = document.getElementsByClassName("front-page__project-video");
 
-var figure = $(".front-page__project-video").hover(hoverVideo, hideVideo);
+for(var i = 0, iMax = videos.length; i < iMax; i ++) {
+  videos[i].addEventListener("mouseover",function() {
+    this.play();
+  },false);
 
-function hoverVideo(e) {
-  this.play();
-};
-
-function hideVideo(e) {
-  this.pause();
-};
+  videos[i].addEventListener("mouseout", function() {
+    this.pause();
+  }, false);
+}

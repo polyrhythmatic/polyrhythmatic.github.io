@@ -175,7 +175,7 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
   background-repeat: repeat;
   z-index: -1;
   background-size: $cascade-bg-size $cascade-bg-size;
-  background-color: $background-color;
+  background-color: black;
 
   @media (max-width: 800px) {
     width: $cascade-width-mobile;

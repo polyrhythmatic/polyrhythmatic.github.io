@@ -1,13 +1,13 @@
-var $ = require("jquery");
+// var $ = require("jquery");
 
-function setBg(divs) {
-  $(divs).each(function(div){
-    var index = Math.floor(Math.random() * 26) + 1;
-    $(divs[div]).css("background-image", "url(\"../images/pattern_" + index + ".svg\")");
-  });
+function setBg(div) {
+  var index = Math.floor(Math.random() * 26) + 1;
+  div.style.backgroundImage = "url(\"../images/pattern_" + index + ".svg\")";
+  div.style.backgroundColor = "white";
 }
 
-var elements = $(".front-page__project-cascade");
-elements.each(function(index) {
-  setBg($(elements[index]).find(".front-page__project-bg"));
-});
+var elements = document.getElementsByClassName("front-page__project-bg");
+
+for(var i = 0, iMax = elements.length; i < iMax; i ++){
+  setBg(elements[i]);
+};
