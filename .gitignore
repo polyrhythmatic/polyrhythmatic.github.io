@@ -2,6 +2,7 @@ _drafts/
 _site/
 *.swp
 .sass-cache
+cloudflareKey.js
 
 # Created by https://www.gitignore.io/api/ruby,sass,jekyll,osx,node
 

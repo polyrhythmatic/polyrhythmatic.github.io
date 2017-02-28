@@ -14,4 +14,4 @@ kramdown:
 collections:
   projects:
     output: true
-exclude: ["node_modules", "package.json", "webpack", "webpack.config.js"]
+exclude: ["node_modules", "package.json", "webpack", "webpack.config.js", "postcss.config.js", "clearCache.js", "cloudflareKey.js"]
