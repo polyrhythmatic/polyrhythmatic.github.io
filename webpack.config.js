@@ -3,7 +3,7 @@ var ImageminPlugin = require("imagemin-webpack-plugin").default;
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var extractSass = new ExtractTextPlugin({
-    filename: "./css/[name].css"
+    filename: "./[name].css"
     // disable: process.env.NODE_ENV === "development"
 });
 
@@ -36,6 +36,11 @@ module.exports = {
         // use style-loader in development
         fallbackLoader: "style-loader"
       })
-    }]
+    }
+    , {
+      test: /\.(woff|woff2|eot|ttf)$/,
+      loader: 'url-loader?limit=10000'
+    }
+    ]
   }
 };
