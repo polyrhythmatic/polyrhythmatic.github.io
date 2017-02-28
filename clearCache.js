@@ -1,7 +1,6 @@
 var CFClient = require("cloudflare");
 var key = require("./cloudflareKey.js");
 
-console.log(key);
 var client = new CFClient({
     email: "sethkranzler@gmail.com",
     key: key
