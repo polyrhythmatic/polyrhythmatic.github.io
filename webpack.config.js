@@ -8,7 +8,7 @@ var extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-  entry: ["./webpack/entry.js", "./webpack/analytics.js"],
+  entry: ["./webpack/randomBackground.js", "./webpack/entry.js", "./webpack/analytics.js"],
   output: {
     path: "./assets/",
     filename: "/js/bundle.js"
