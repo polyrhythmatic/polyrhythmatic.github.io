@@ -2,8 +2,8 @@
 layout: page
 title: Phase
 permalink: /phase/
-poster: /videos/phase.jpg
-vid: /videos/phase.mp4
+poster: /assets/front_page_videos/phase.jpg
+vid: /assets/front_page_videos/phase.mp4
 ---
 
 <iframe src="https://player.vimeo.com/video/141961475" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

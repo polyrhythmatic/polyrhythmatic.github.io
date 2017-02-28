@@ -2,8 +2,8 @@
 layout: page
 title: The Fetishism of Commodities
 permalink: /fetishism-of-commodities/
-poster: /videos/fetishism_commodities.jpg
-vid: /videos/fetishism_commodities.mp4
+poster: /assets/front_page_videos/fetishism_commodities.jpg
+vid: /assets/front_page_videos/fetishism_commodities.mp4
 ---
 A commentary on commodification and the labor obscuring nature of capital.
 

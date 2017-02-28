@@ -2,8 +2,8 @@
 layout: page
 title: Music In The Age of Surveillance
 permalink: /music-in-the-age/
-poster: /videos/music-in-the-age.jpg
-vid: /videos/music-in-the-age.mp4
+poster: /assets/front_page_videos/music-in-the-age.jpg
+vid: /assets/front_page_videos/music-in-the-age.mp4
 ---
 
 <iframe src="https://player.vimeo.com/video/152619439" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

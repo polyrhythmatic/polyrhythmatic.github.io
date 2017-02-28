@@ -2,8 +2,8 @@
 layout: page
 title: Movement Music
 permalink: /movement-music/
-poster: /videos/movement-music.jpg
-vid: /videos/movement-music.mp4
+poster: /assets/front_page_videos/movement-music.jpg
+vid: /assets/front_page_videos/movement-music.mp4
 ---
 
 <iframe src="https://player.vimeo.com/video/133623911" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

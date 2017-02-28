@@ -1,19 +1,41 @@
+var CopyWebpackPlugin = require("copy-webpack-plugin");
+var ImageminPlugin = require("imagemin-webpack-plugin").default;
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+var extractSass = new ExtractTextPlugin({
+    filename: "./css/[name].css"
+    // disable: process.env.NODE_ENV === "development"
+});
+
 module.exports = {
-  entry: ['./webpack/entry.js', "./webpack/analytics.js"],
+  entry: ["./webpack/entry.js", "./webpack/analytics.js"],
   output: {
-    path: './js/',
-    filename: 'bundle.js'
+    path: "./assets/",
+    filename: "/js/bundle.js"
   },
-  // module: {
-  //     rules: [{
-  //         test: /\.scss$/,
-  //         use: [{
-  //             loader: "style-loader" // creates style nodes from JS strings
-  //         }, {
-  //             loader: "css-loader" // translates CSS into CommonJS
-  //         }, {
-  //             loader: "sass-loader" // compiles Sass to CSS
-  //         }]
-  //     }]
-  // }
+  plugins: [
+    // Copy the images folder and optimize all the images
+    new CopyWebpackPlugin([{
+      from: "./_assets/",
+      to: "./"
+    }]),
+    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    extractSass
+  ],
+  module: {
+    rules: [{
+      test: /\.scss$/,
+      loaders: extractSass.extract({
+        loader: [{
+          loader: "css-loader"
+        }, {
+          loader: "postcss-loader"
+        }, {
+          loader: "sass-loader"
+        }],
+        // use style-loader in development
+        fallbackLoader: "style-loader"
+      })
+    }]
+  }
 };

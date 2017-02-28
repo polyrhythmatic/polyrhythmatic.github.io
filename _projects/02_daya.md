@@ -2,8 +2,8 @@
 layout: page
 title: Daya
 permalink: /Daya/
-poster: /videos/daya.jpg
-vid: /videos/daya.mp4
+poster: /assets/front_page_videos/daya.jpg
+vid: /assets/front_page_videos/daya.mp4
 ---
 <iframe src="https://player.vimeo.com/video/143033999" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 

@@ -16,24 +16,24 @@ $background-color: white;
     box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "TeXGyreHeros-Regular";
-  src: local("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff2") format("woff2");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff") format("woff");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot?#iefix") format("embedded-opentype");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.ttf") format("truetype");
-  src: url("./fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.svg#TexGyreHeros-Regular") format("svg");
-}
+// @font-face {
+//   font-family: "TeXGyreHeros-Regular";
+//   src: local("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff2") format("woff2");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.woff") format("woff");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.ttf") format("truetype");
+//   src: url("../fonts/TeXGyreHeros-Regular/TeXGyreHeros-Regular.svg#TexGyreHeros-Regular") format("svg");
+// }
 
-@font-face {
-  font-family: "TeXGyreHeros-Bold";
-  src: local("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff2") format("woff2");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff") format("woff");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.ttf") format("truetype");
-  src: url("./fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.svg#TexGyreHeros-Bold") format("svg");
-}
+// @font-face {
+//   font-family: "TeXGyreHeros-Bold";
+//   src: local("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff2") format("woff2");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.woff") format("woff");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.ttf") format("truetype");
+//   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.svg#TexGyreHeros-Bold") format("svg");
+// }

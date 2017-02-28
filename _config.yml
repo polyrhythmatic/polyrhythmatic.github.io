@@ -8,10 +8,6 @@ url: "http://sethkranzler.com" # the base hostname & protocol for your site
 twitter_username: polyrhythmic
 github_username:  polyrhythmatic
 
-# Build settings
-sass:
-  style: compressed
-  sass_dir: _sass
 include: ["_pages"]
 kramdown:
   input: GFM

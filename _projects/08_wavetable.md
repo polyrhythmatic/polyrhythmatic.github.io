@@ -2,8 +2,8 @@
 layout: page
 title: Wavetable Synthesizer
 permalink: /wavetable-synthesizer/
-poster: /videos/wavetable.jpg
-vid: /videos/wavetable.mp4
+poster: /assets/front_page_videos/wavetable.jpg
+vid: /assets/front_page_videos/wavetable.mp4
 ---
 
 ### PERCEPTIBLE SHIFTS IN TIMBRE THROUGH REAL-TIME WAVEFORM GENERATION AND MANIPULATION

@@ -1,6 +1,6 @@
 <header>
   <nav class="front-page__nav">
-    <a href="/" class="front-page__logo"><img src="/images/front-page__nav-logo.png"></a>
+    <a href="/" class="front-page__logo"><img src="/assets/images/front-page__nav-logo.png"></a>
     <div class="front-page__nav-items">
     {% for page in site.pages %} {% if page.title %}
       <div class="front-page__nav-item"><a href="{{ page.url | prepend: site.baseurl }}">

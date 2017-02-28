@@ -2,7 +2,7 @@
 
 function setBg(div) {
   var index = Math.floor(Math.random() * 26) + 1;
-  div.style.backgroundImage = "url(\"../images/pattern_" + index + ".svg\")";
+  div.style.backgroundImage = "url(\"../assets/images/pattern_" + index + ".svg\")";
   div.style.backgroundColor = "white";
 }
 

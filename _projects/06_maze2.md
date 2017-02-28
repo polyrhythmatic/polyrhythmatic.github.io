@@ -2,8 +2,8 @@
 layout: page
 title: Maze2
 permalink: /maze2/
-poster: /videos/maze2.jpg
-vid: /videos/maze2.mp4
+poster: /assets/front_page_videos/maze2.jpg
+vid: /assets/front_page_videos/maze2.mp4
 ---
 <iframe src="https://player.vimeo.com/video/149098758" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 

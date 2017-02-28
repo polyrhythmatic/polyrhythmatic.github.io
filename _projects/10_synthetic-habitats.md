@@ -2,8 +2,8 @@
 layout: page
 title: Synthetic Habitats
 permalink: /synthetic-habitats/
-poster: /videos/synthetic-habitats.jpg
-vid: /videos/synthetic-habitats.mp4
+poster: /assets/front_page_videos/synthetic-habitats.jpg
+vid: /assets/front_page_videos/synthetic-habitats.mp4
 description: An exploration of the Macaulay Library of wildlife sounds, the worlds largest and oldest scientific archive of biodiversity audio and video recordings.
 ---
 

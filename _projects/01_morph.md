@@ -2,8 +2,8 @@
 layout: page
 title: Morph
 permalink: /morph/
-poster: /videos/morph.jpg
-vid: /videos/morph.mp4
+poster: /assets/front_page_videos/morph.jpg
+vid: /assets/front_page_videos/morph.mp4
 ---
 <iframe src="https://player.vimeo.com/video/150154833" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
