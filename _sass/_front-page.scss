@@ -9,7 +9,6 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
 .front-page__logo {
   display: inline-block;
   width: 25%;
-  // font-family: $heading-font;
 }
 
 .front-page__nav {
@@ -28,10 +27,6 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
     margin-top: 10px;
   }
 }
-
-// .front-page__nav-item span {
-//   display: inline-block;
-// }
 
 .front-page__nav-item img {
   width: auto;
@@ -155,6 +150,7 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 15px;
+    letter-spacing: 0.1em;
   }
 
   & p {
@@ -162,6 +158,7 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
     margin: 0;
     font-size: 12px;
     margin-bottom: 30px;
+    letter-spacing: .05em;
   }
 
   @media (max-width: 800px) {

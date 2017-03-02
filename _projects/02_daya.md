@@ -5,7 +5,8 @@ permalink: /Daya/
 poster: /assets/front_page_videos/daya.jpg
 vid: /assets/front_page_videos/daya.mp4
 ---
-<iframe src="https://player.vimeo.com/video/143033999" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+{% include video.html url="https://player.vimeo.com/video/143033999"%}
 
 Video in collaboration with [AV](http://www.kimsehyun.kr/)
 

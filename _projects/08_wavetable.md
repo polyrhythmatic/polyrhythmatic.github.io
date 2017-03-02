@@ -8,10 +8,14 @@ vid: /assets/front_page_videos/wavetable.mp4
 
 ### PERCEPTIBLE SHIFTS IN TIMBRE THROUGH REAL-TIME WAVEFORM GENERATION AND MANIPULATION
 
-<div><iframe src="https://player.vimeo.com/video/114735726" frameborder="0" width="500" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+{% include video.html url="https://player.vimeo.com/video/114735726"%}
 
-![photo]({{ site.url }}/assets/wavetable/images/wavetable_1.jpg){: .pull-left-50 } This project came about through an interest in transformative sounds. Sound can evolve in a number of ways - through changes in pitch and melody, velocity, and timber. For example, a guitarist can switch to a new pedal to change the timbre of their instrument as they play, or a keyboard player can pick up a melody where a saxophonist left off. Likewise, sound synthesis allows a myriad of ways to change the timbre of a voice. In the traditional methods of synthesis such as subtractive or additive synthesis, waveform shape is indirectly controlled with various parameters. This waveform shape is what ultimately defines the timbre of the synthesizer. 
-<br>
+---
+![photo]({{ site.url }}/assets/wavetable/images/wavetable_1.jpg){: .pull-left-50 }
+
+This project came about through an interest in transformative sounds. Sound can evolve in a number of ways - through changes in pitch and melody, velocity, and timber. For example, a guitarist can switch to a new pedal to change the timbre of their instrument as they play, or a keyboard player can pick up a melody where a saxophonist left off. Likewise, sound synthesis allows a myriad of ways to change the timbre of a voice. In the traditional methods of synthesis such as subtractive or additive synthesis, waveform shape is indirectly controlled with various parameters. This waveform shape is what ultimately defines the timbre of the synthesizer.
+
+---
 
 ![photo]({{ site.url }}/assets/wavetable/images/wavetable_2.png){: .pull-right-66 }
 
@@ -20,9 +24,13 @@ vid: /assets/front_page_videos/wavetable.mp4
 
 The waveforms in the figure to the right represent the same pitch and amplitude. But when played side by side, they would all sound distinctly different, despite being musically the same. By looking at one period of the waveform, one can see why - the sine is a pure tone, but the violin and clarinet both have waveforms that contain many other [harmonics](http://en.wikipedia.org/wiki/Timbre#Harmonics) which richen the sound.
 
+---
+
 ## CREATIVE SYNTHESIS
 
 ![photo]({{ site.url }}//assets/wavetable/images/wavetable_3.png){: .pull-left-50 } The Wavetable Synthesizer utilizes what I have dubbed "creative synthesis". Instead of indirectly affecting waveform shape with envelopes, LFO’s, and oscillators, the Wavetable Synthesizer allows the user to directly control the waveform shape using 12 sliders and two knobs. Eight of the sliders control the overall shape of the wave (acting much like “attractors” on a line), while two knobs control how the points are interpolated (smooth, triangular, or square) and at what resolution (from fine to coarse). The four sliders labeled “A”, “D”, “S”, and “R” are used for attack, decay, sustain, and release respectively (more information on that here). Users can access saved waveforms with a bank of buttons, and when selected, can watch the controller transform automatically to these settings. The rightmost knob allows for control of the transition speed between presets.
+
+---
 
 ## THE IMPORTANCE OF TACTILE FEEDBACK AND PHYSICALITY
 
@@ -43,12 +51,15 @@ In order to then play the waveform, the [minim wavetable function](http://code.c
 
 The processing code can be download [here]({{ site.url }}/assets/wavetable/attachments/sketch_141020b-dthb.zip)
 
+---
+
 ## UNDER THE HOOD
 
 The brains of the controller is an Arduino Mega 2560. Code for the project can be downloaded [here]({{ site.url }}/assets/wavetable/attachments/_20141215_with_presets.ino).
 
-![photo]({{ site.url }}/assets/wavetable/images/wavetable_6.jpg){: .pull-center }
+![photo]({{ site.url }}/assets/wavetable/images/wavetable_6.jpg)
 
+---
 ## FLYING FADERS
 
 In order to have the linear potentiometers react to the presets called, motorized potentiometers AKA "flying faders" were used. Each potentiometer features a DC motor that can control the fader position. These motors require an H-bridge to function, which in turn require two digital pins and a PWM pin from the Arduino to vary motor speed and direction. Since this configuration would necessitate an additional Arduino, a transistor was used so that only one enable pin was needed. (see [here](http://www.societyofrobots.com/member_tutorials/book/export/html/159))

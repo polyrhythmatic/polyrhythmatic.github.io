@@ -1,0 +1,36 @@
+.header__logo {
+  display: inline-block;
+  width: 200px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding-left: 5vw;
+  padding-top: 50px;
+}
+
+.header__nav-item {
+  & a {
+    display: inline-block;
+  }
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.header__nav-item img {
+  width: auto;
+  height: 15px;
+}
+
+.header__nav-items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 20%;
+}

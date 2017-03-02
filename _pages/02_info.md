@@ -2,7 +2,7 @@
 layout: page
 title: Info
 permalink: /info/
-img: /assets/images/front-page__nav-info.png
+img: /assets/images/header__nav-info.png
 ---
 a work in progress
 
