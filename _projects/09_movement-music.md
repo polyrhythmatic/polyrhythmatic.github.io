@@ -4,6 +4,7 @@ title: Movement Music
 permalink: /movement-music/
 poster: /assets/front_page_videos/movement-music.jpg
 vid: /assets/front_page_videos/movement-music.mp4
+description: Giving dancers new opportunities for expression with digital sensors.
 ---
 {% include video.html url="https://player.vimeo.com/video/133623911"%}
 

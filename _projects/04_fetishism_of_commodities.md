@@ -4,6 +4,7 @@ title: The Fetishism of Commodities
 permalink: /fetishism-of-commodities/
 poster: /assets/front_page_videos/fetishism_commodities.jpg
 vid: /assets/front_page_videos/fetishism_commodities.mp4
+description: An exploration into the capitalist-laborer relationship.
 ---
 A commentary on commodification and the labor obscuring nature of capital.
 

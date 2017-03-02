@@ -4,6 +4,7 @@ title: Music In The Age of Surveillance
 permalink: /music-in-the-age/
 poster: /assets/front_page_videos/music-in-the-age.jpg
 vid: /assets/front_page_videos/music-in-the-age.mp4
+description: Sonifying your browsing
 ---
 
 {% include video.html url="https://player.vimeo.com/video/152619439"%}

@@ -4,6 +4,7 @@ title: Phase
 permalink: /phase/
 poster: /assets/front_page_videos/phase.jpg
 vid: /assets/front_page_videos/phase.mp4
+description: A touch reactive wall with which users could interact with oscillating wave nodes.
 ---
 
 {% include video.html url="https://player.vimeo.com/video/141961475"%}

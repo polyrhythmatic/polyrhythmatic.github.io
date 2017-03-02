@@ -4,6 +4,7 @@ title: Morph
 permalink: /morph/
 poster: /assets/front_page_videos/morph.jpg
 vid: /assets/front_page_videos/morph.mp4
+description: Music for one of the largest high-resolution video walls in the world
 ---
 {% include video.html url="https://player.vimeo.com/video/150154833"%}
 

@@ -4,7 +4,7 @@ title: Resound
 permalink: /resound/
 poster: /assets/front_page_videos/resound.jpg
 vid: /assets/front_page_videos/resound.mp4
-description: Resound is an experiment in the new world of audiovisual work in VR. Resound uses an 8 speaker, 2 subwoofer surround sound system to give a visceral immersion in sonic environments. The user experiences these environments and can interact with them using the HTC VIVE headset and its controllers
+description: Resound is an experiment in the new world of audiovisual work in VR.
 ---
 Resound is an experiment in the new world of audiovisual work in VR. Resound uses an 8 speaker, 2 subwoofer surround sound system to give a visceral immersion in sonic environments. The user experiences these environments and can interact with them using the HTC VIVE headset and its controllers
 

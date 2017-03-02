@@ -4,6 +4,7 @@ title: Maze2
 permalink: /maze2/
 poster: /assets/front_page_videos/maze2.jpg
 vid: /assets/front_page_videos/maze2.mp4
+description: A procedural virtual reality experiment in generative realities. Generative terrain and music combine to create an endless environment.
 ---
 {% include video.html url="https://player.vimeo.com/video/149098758"%}
 

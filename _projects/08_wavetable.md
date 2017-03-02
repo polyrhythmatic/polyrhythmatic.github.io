@@ -4,6 +4,7 @@ title: Wavetable Synthesizer
 permalink: /wavetable-synthesizer/
 poster: /assets/front_page_videos/wavetable.jpg
 vid: /assets/front_page_videos/wavetable.mp4
+description: An investigation into tangible synthesis interfaces.
 ---
 
 ### PERCEPTIBLE SHIFTS IN TIMBRE THROUGH REAL-TIME WAVEFORM GENERATION AND MANIPULATION
