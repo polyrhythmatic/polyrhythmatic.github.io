@@ -9,7 +9,7 @@ description: A series of interactive web apps for Flume's Grammy award winning a
 
 ![photo]({{ site.url }}/assets/flume-skin/images/nbly.png){: .pull-left-50 }
 <br>
-A series of two interactive promotional websites for the Grammy award winning "Skin" album by [Flume](http://www.flumemusic.com/), made with [Cassie Tarakajian](cassietarakajian.com). You can watch him play with it [here](https://twitter.com/flumemusic/status/740956765500510208?ref_src=twsrc%5Etfw). The first experience was a promotion for the release of the single "Never Be Like You". Using the artwork of [Jonathan Zawada](http://www.zawada.com.au/), we created a web app that allows the user to play the chorus of the song by either touching the flower petals, or using the keyboard. You can [play with it here](http://skin.flu.me/). The project was re-skinned for the release of the single "Say It", which can be viewed [here](https://sethkranzler.com/flume/build/).
+A series of two interactive promotional websites for the Grammy award winning "Skin" album by [Flume](http://www.flumemusic.com/), made with [Cassie Tarakajian](http://cassietarakajian.com). You can watch him play with it [here](https://twitter.com/flumemusic/status/740956765500510208?ref_src=twsrc%5Etfw). The first experience was a promotion for the release of the single "Never Be Like You". Using the artwork of [Jonathan Zawada](http://www.zawada.com.au/), we created a web app that allows the user to play the chorus of the song by either touching the flower petals, or using the keyboard. You can [play with it here](http://skin.flu.me/). The project was re-skinned for the release of the single "Say It", which can be viewed [here](https://sethkranzler.com/flume/build/).
 
 ---
 
