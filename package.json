@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "jekyll-serve": "jekyll serve",
-    "webpack-watch": "webpack -p --watch --optimize-minimize",
-    "serve": "concurrently --kill-others \"npm run jekyll-serve\" \"npm run webpack-watch\""
+    "jekyll-build": "jekyll build",
+    "webpack-build": "webpack -p --optimize-minimize",
+    "webpack-watch": "webpack",
+    "dev": "concurrently --kill-others \"npm run jekyll-serve\" \"npm run webpack-watch\"",
+    "build": "npm run webpack-build && jekyll build"
   },
   "repository": {
     "type": "git",
