@@ -8,7 +8,7 @@
     "jekyll-serve": "jekyll serve",
     "jekyll-build": "jekyll build",
     "webpack-build": "webpack -p --optimize-minimize",
-    "webpack-watch": "webpack",
+    "webpack-watch": "webpack --watch",
     "dev": "concurrently --kill-others \"npm run jekyll-serve\" \"npm run webpack-watch\"",
     "build": "npm run webpack-build && jekyll build"
   },

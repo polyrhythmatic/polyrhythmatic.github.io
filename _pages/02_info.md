@@ -4,25 +4,10 @@ title: Info
 permalink: /info/
 img: /assets/images/header__nav-info.png
 ---
-a work in progress
-
-# Awards and Honors
-
-# Teaching
-
 # Work
 
 ## Google Summer of Code
 Processing foundation and Tone.js
-
-## OXO International
-Product design engineer
-
-## Nextfab Studio
-Designer, Engineer, Fabricator
-
-## West Hartford Tool and Die
-Machinist
 
 # Education
 
@@ -34,3 +19,8 @@ Interactive Telecommunications Program
 Master of Professional Studies
 
 # Residencies
+<a href="http://pioneerworks.org/residency/seth-kranzler/">Pioneer Works</a>, January - February 2016
+
+<a href="https://medium.com/dbrs-innovation-labs/the-generative-critique-d0a2637e160b">DBRS Labs</a>, July 2016
+
+Laboratory Spokane, August 2016
