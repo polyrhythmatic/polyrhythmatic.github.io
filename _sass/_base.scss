@@ -34,3 +34,13 @@ $background-color: white;
   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.eot?#iefix") format("embedded-opentype");
   src: url("../fonts/TeXGyreHeros-Bold/TeXGyreHeros-Bold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "NewYork";
+  src: local("../fonts/NewYork/NewYork");
+  src: url("../fonts/NewYork/NewYork.woff2") format("woff2");
+  src: url("../fonts/NewYork/NewYork.woff") format("woff");
+  src: url("../fonts/NewYork/NewYork.eot");
+  src: url("../fonts/NewYork/NewYork.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/NewYork/NewYork.ttf") format("truetype");
+}
