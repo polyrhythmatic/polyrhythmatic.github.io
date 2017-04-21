@@ -4,7 +4,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{% if page.description %}{{ page.description }} {{ site.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:url" content="{{ "/assets/images/logo.gif" | prepend: site.url }}" />
+  <!-- <meta property="og:url" content="{{ "/assets/images/logo.gif" | prepend: site.url }}" /> -->
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Seth Kranzler{% if page.title %}{{ " | " | prepend: page.title }}{% endif %}" />
