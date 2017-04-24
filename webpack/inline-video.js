@@ -1,4 +1,4 @@
-var enableInlineVideo = require('iphone-inline-video');
+var enableInlineVideo = require("iphone-inline-video").default;
 
 window.addEventListener("load",function(event) {
   var videos = document.getElementsByTagName("video")
