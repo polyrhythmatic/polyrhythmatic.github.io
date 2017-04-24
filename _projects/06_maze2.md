@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Maze2
 permalink: /maze2/
 poster: /assets/front_page_videos/maze2.jpg

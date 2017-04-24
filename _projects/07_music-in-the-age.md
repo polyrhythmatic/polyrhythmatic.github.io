@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Music In The Age of Surveillance
 permalink: /music-in-the-age/
 poster: /assets/front_page_videos/music-in-the-age.jpg

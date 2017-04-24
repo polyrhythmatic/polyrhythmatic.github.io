@@ -1,0 +1,21 @@
+.footer {
+  text-align: center;
+  padding: 40px;
+
+  & nav ul {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & nav li {
+    display: inline;
+    font-family: NewYork;
+    font-size: 20px;
+  }
+
+  & nav a {
+    text-decoration: none;
+  }
+}

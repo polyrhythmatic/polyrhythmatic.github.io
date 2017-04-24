@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Steve Reich Is Calling
 permalink: /steve-reich-is-calling/
 poster: /assets/front_page_videos/reich.jpg

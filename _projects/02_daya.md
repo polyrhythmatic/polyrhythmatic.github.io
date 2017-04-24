@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Daya
 permalink: /Daya/
 poster: /assets/front_page_videos/daya.jpg

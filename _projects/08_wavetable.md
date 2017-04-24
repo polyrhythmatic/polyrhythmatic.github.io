@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Wavetable Synthesizer
 permalink: /wavetable-synthesizer/
 poster: /assets/front_page_videos/wavetable.jpg

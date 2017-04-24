@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Synthetic Habitats
 permalink: /synthetic-habitats/
 poster: /assets/front_page_videos/synthetic-habitats.jpg

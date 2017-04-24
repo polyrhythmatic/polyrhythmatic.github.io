@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Morph
 permalink: /morph/
 poster: /assets/front_page_videos/morph.jpg

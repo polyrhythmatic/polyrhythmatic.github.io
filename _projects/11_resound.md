@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Resound
 permalink: /resound/
 poster: /assets/front_page_videos/resound.jpg

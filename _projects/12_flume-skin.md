@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Flume
 permalink: /flume-skin/
 poster: /assets/front_page_videos/flume-skin.jpg

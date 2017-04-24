@@ -2,7 +2,6 @@
 layout: page
 title: Info
 permalink: /info/
-img: /assets/images/header__nav-info.png
 ---
 # Work
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: The Fetishism of Commodities
 permalink: /fetishism-of-commodities/
 poster: /assets/front_page_videos/fetishism_commodities.jpg

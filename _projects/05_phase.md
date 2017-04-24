@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Phase
 permalink: /phase/
 poster: /assets/front_page_videos/phase.jpg

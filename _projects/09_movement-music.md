@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Movement Music
 permalink: /movement-music/
 poster: /assets/front_page_videos/movement-music.jpg
