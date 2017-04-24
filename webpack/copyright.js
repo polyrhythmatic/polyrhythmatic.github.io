@@ -1,11 +1,11 @@
-//this keeps the copyright year up to date.
-var d = new Date();
-var str = "Copyright © " + d.getFullYear() + " Seth Kranzler";
+// //this keeps the copyright year up to date.
+// var d = new Date();
+// var str = "Copyright © " + d.getFullYear() + " Seth Kranzler";
 
-var para = document.createElement("p");
-var node = document.createTextNode(str);
+// var para = document.createElement("p");
+// var node = document.createTextNode(str);
 
-para.appendChild(node);
+// para.appendChild(node);
 
-var footer = document.getElementById("site-footer");
-footer.appendChild(para);
+// var footer = document.getElementById("footer");
+// footer.appendChild(para);

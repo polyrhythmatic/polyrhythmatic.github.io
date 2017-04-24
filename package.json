@@ -41,6 +41,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "in-view": "^0.6.1"
+    "in-view": "^0.6.1",
+    "iphone-inline-video": "^2.0.2"
   }
 }
