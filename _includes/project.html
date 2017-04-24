@@ -1,0 +1,17 @@
+<section class="front-page__project">
+  <div class="front-page__project-cascade-wrapper">
+    <div class="front-page__project-cascade">
+      <div class="front-page__project-bg"></div>
+      <div class="front-page__project-bg front-page__project-bg--offset-1"></div>
+      <div class="front-page__project-bg front-page__project-bg--offset-2"></div>
+      <div class="front-page__project-bg front-page__project-bg--offset-3"></div>
+      <a href="{{ project.url | prepend: site.url }}">
+        <video poster="{{ project.poster }}" class="front-page__project-video" src="{{ project.vid }}" loop preload muted playsinline webkit-playsinline></video>
+      </a>
+    </div>
+  </div>
+  <div class="front-page__project-description">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+  </div>
+</section>

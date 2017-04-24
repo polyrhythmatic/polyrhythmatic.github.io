@@ -1,32 +1,17 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %} {% include header.html %}
-
 <body>
   <main>
-    <div class="front-page__projects">
+    <article class="front-page__projects">
+      <header class="hidden">
+        <h1>Project List</h1>
+      </header>
       {% for project in site.projects reversed %} {% if project.title %}
-      <div class="front-page__project">
-        <div class="front-page__project-cascade">
-          <div class="front-page__project-bg">
-            <div class="front-page__project-bg front-page__project-bg--offset"></div>
-          </div>
-          <a href="{{ project.url | prepend: site.url }}">
-            <video poster="{{ project.poster }}" class="front-page__project-video" src="{{ project.vid }}" loop preload muted playsinline></video>
-          </a>
-        </div>
-        <div class="front-page__project-description">
-          <h4>{{ project.title }}</h4>
-          <p>{{ project.description }}</p>
-        </div>
-      </div>
+      {% include project.html %}
       {% endif %} {% endfor %}
-    </div>
-    <section>
-      {{ content }}
-    </section>
+    </article>
   </main>
   {% include footer.html %}
 </body>
-
 </html>
