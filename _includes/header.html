@@ -11,6 +11,11 @@
         </a>
       </li>
     {% endif %}{% endfor %}
+      <li>
+        <a href="mailto:{{ site.email }}">
+          <img src="{{ site.baseurl | prepend: site.url }}/assets/images/mail_icon.svg">
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
