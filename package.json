@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jekyll-serve": "jekyll serve --host 10.0.1.4",
+    "jekyll-serve": "jekyll serve",
     "jekyll-build": "jekyll build",
     "webpack-build": "webpack -p --optimize-minimize",
     "webpack-watch": "webpack --watch",

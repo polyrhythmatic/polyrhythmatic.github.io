@@ -1,10 +1,5 @@
-$cascade-distance: 2vw;
-$cascade-width: 50vw;
-$cascade-height: $cascade-width * 0.5625;
+$cascade-distance: 1vw;
 $cascade-bg-size: 40px;
-
-$cascade-width-mobile: 80vw;
-$cascade-height-mobile: $cascade-width-mobile * 0.5625;
 
 .front-page__projects {
   display: block;
@@ -49,7 +44,7 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
     margin-right: 40px;
     @media (max-width: 800px) {
       order: 2;
-      margin-left: 40px;
+      margin-left: 20px;
     }
   }
 }
@@ -62,18 +57,15 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
   & .front-page__project-description {
     order: 2;
     margin-left: 40px;
+    @media (max-width: 800px) {
+      margin-left: 20px;
+    }
   }
 }
 
 .front-page__project-cascade-wrapper {
   width: 100%;
   height: auto;
-  // height: 0;
-  // padding-bottom: 56.25%;
-  // @media (max-width: 800px) {
-  //   width: 100%;
-  // }
-  // margin-bottom: 50%;
   position: relative;
 }
 
@@ -81,28 +73,18 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
-  // @media (max-width: 800px) {
-  //   width: 100%;
-  // }
-  // padding-bottom: 50%;
-  // position: relative;
 }
 
 .front-page__project-bg {
   position: absolute;
-  height: 80%; //$cascade-height;
-  width: 80%; //$cascade-width;
+  height: 80%;
+  width: 80%;
   left: 0px;
   top: 0px;
   background-repeat: repeat;
   z-index: -1;
   background-size: $cascade-bg-size $cascade-bg-size;
   background-color: black;
-
-  // @media (max-width: 800px) {
-  //   width: $cascade-width-mobile;
-  //   height: $cascade-height-mobile;
-  // }
 }
 
 .front-page__project-bg--offset-1 {
@@ -121,19 +103,12 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
 }
 
 .front-page__project-video {
-  display: block;
   position: absolute;
   height: 80%;
   width: 80%;
   filter: grayscale(100%);
   top: 4 * $cascade-distance;
   left: 4 * $cascade-distance;
-
-  // @media (max-width: 800px) {
-  //   width: $cascade-width-mobile;
-  //   height: $cascade-height-mobile;
-  // }
-
   &:hover {
     filter: inherit;
   }
@@ -163,7 +138,7 @@ $cascade-height-mobile: $cascade-width-mobile * 0.5625;
   }
 
   @media (max-width: 800px) {
-    width: $cascade-width-mobile;
+    width: 100%;
     height: auto;
     margin-top: 40px;
     justify-content: flex-start;
