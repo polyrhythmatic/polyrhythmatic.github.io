@@ -3,7 +3,8 @@
   padding: 40px;
 
   & nav ul {
-    width: 400px;
+    max-width: 400px;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -18,4 +19,8 @@
   & nav a {
     text-decoration: none;
   }
+}
+
+#next_page {
+  padding: 0 20px;
 }

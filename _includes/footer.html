@@ -3,8 +3,8 @@
   {% if page.layout == "project" %}{% for project in site.projects %}{% if project.id == page.id %}{% assign previous_page = forloop.index0 | plus: 1 | modulo: forloop.length %}{% assign next_page = forloop.index0 | minus: 1 | plus: forloop.length | modulo: forloop.length %}{% capture next_url %}{{ site.projects[next_page].permalink | prepend: site.baseurl | prepend: site.url }}{% endcapture %}{% capture previous_url %}{{ site.projects[previous_page].permalink | prepend: site.baseurl | prepend: site.url }}{% endcapture %}{% endif %}{% endfor %}
   <nav>
     <ul>
-      <li><a href="{{ previous_url }}" id="previous_page">Previous Project</a></li>
-      <li><a href="{{ next_url }}" id="next_page">Next Project</a></li>
+      <li><a href="{{ previous_url }}" id="previous_page">Previous</a></li>
+      <li><a href="{{ next_url }}" id="next_page">Next</a></li>
     </ul>
   </nav>
   {% endif %}
