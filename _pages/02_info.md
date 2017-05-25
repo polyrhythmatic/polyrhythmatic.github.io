@@ -34,5 +34,14 @@ Master of Professional Studies at ITP
 <div>Richmond Art Gallery, Spokane WA - 2016</div>
 <div>Alt-AI, NYC - 2016</div>
 </div>
+---
+## Awards and Honors
+
+2014-2015 Tisch School of the Arts Departmental Fellowship  
+2015-2016 Tisch School of the Arts Departmental Fellowship  
+2015 Google summer of code Fellowship
 
 ---
+## Teaching 
+CNC Design and Manufacturing, <a href="https://nextfab.com/">NextFab Studio</a>  
+Introduction to TIG Welding, Third Ward  
