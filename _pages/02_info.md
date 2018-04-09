@@ -47,6 +47,7 @@ Master of Professional Studies at ITP
 ## Talks
 
 <a href="https://www.forbes.com/sites/emmasandler/2017/09/21/this-is-what-its-like-to-attend-a-conference-for-creative-people/#6cedf689330b">Likeminds</a>, 2017 
+<a href="https://mouthmedianetwork.com/about/press/sennheiser-mouthmedia-partnership">Sennheiser & MouthMedia Podcast</a>, 2017  
 
 ---
 ## Teaching 
